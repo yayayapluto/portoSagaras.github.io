@@ -1,3 +1,4 @@
+//Disable opening context menu when right click
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
@@ -17,27 +18,27 @@ document.addEventListener('keydown', function(event) {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get references to the navigation tabs
+    //Get element by each tab
     const generalTab = document.getElementById("general-tab");
     const skillsTab = document.getElementById("skills-tab");
     const projectsTab = document.getElementById("projects-tab");
     const contactTab = document.getElementById("contact-tab");
 
-    // Get references to the content sections
+    //Get element by each element
     const generalContent = document.getElementById("general-content");
     const skillsContent = document.getElementById("skills-content");
     const projectsContent = document.getElementById("projects-content");
     const contactContent = document.getElementById("contact-content");
 
-    // Function to show/hide content based on clicked tab
+    //Function to show/hide content based on click
     function showContent(content, tab) {
-        // Hide all content sections
+        // Hide all content
         generalContent.style.display = "none";
         skillsContent.style.display = "none";
         projectsContent.style.display = "none";
         contactContent.style.display = "none";
 
-        // Remove the active class from all tabs
+        // Remove the active class
         generalTab.classList.remove("active");
         skillsTab.classList.remove("active");
         projectsTab.classList.remove("active");
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tab.classList.add("active");
     }
 
-    // Event listeners for navigation tabs
+    // Event listerenr for each tab
     generalTab.addEventListener("click", function() {
         showContent(generalContent, generalTab);
     });
